@@ -6,9 +6,6 @@ Plugin which allows
 * build Apigee ApiProxy's/Application bundles &
 * deploy Apigee ApiProxy's/Application bundles -- into --> Apigee hybrid Edge Platform
 
-
--------------------------------------------
-## Detailed documentation on the use of plugin
 -------------------------------------------
 
 ## Contents
@@ -36,38 +33,38 @@ Plugin which allows
 - [Java SDK >= 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 - [Maven 3.x](https://maven.apache.org/)
 
-## Plugin Usage
-
-### NOTE ###
-- If you want to use this plugin for Apigee Edge SaaS/Private Cloud OPDK, please refer to this [link](https://github.com/apigee/apigee-deploy-maven-plugin/tree/1.x). You should be using the version 1.x
-```xml
-<dependency>
-  <groupId>io.apigee.build-tools.enterprise4g</groupId>
-  <artifactId>apigee-edge-maven-plugin</artifactId>
-  <version>1.x</version>
-</dependency>
-```
-- For Apigee X or Apigee hybrid, the version of the plugin is 2.x
-```xml
-<dependency>
-  <groupId>io.apigee.build-tools.enterprise4g</groupId>
-  <artifactId>apigee-edge-maven-plugin</artifactId>
-  <version>2.x</version>
-</dependency>
-```
-
 # Getting Started
 
-Often the most difficult and confusing aspect of application development is figuring out how to build a common framework for creating new applications. Over time, development teams have started using tools like Maven, Ant and Ivy to automate some of these functions. This plugin uses the Maven plugin for deploying Apigee bundles to the Edge platform.
+* This plugin uses the Maven plugin
+* Advantages of using it?
+  - Helps in offline development
+  - Easy integrations with -- source control version tools
+  - if your current enterprise build and deploy strategies using Maven or Maven compatible tools 
+  - Configuration management -- across -- organizations/environments
+    - Realtime Enterprise Edge architecture
+      - ==multiple organizations/environments + configurations / based on previous ones
+        - _Example:_ Maven configuration file to replace the number of requests it takes to trip a spike arrest policy
+          - In your non-production environment -- you may want this policy to take effect when -- > 10 requests / minute
+          - In production -- you may want this policy to trip when -- > 10000 requests / minute
+* How to use it?
+    * If you want to use this plugin for Apigee Edge SaaS/Private Cloud OPDK ->  You should be using the [version 1.x](https://github.com/apigee/apigee-deploy-maven-plugin/tree/1.x). 
 
-#### Why this deployment plugin is developed?
+    ```xml
+    <dependency>
+      <groupId>io.apigee.build-tools.enterprise4g</groupId>
+      <artifactId>apigee-edge-maven-plugin</artifactId>
+      <version>1.x</version>
+    </dependency>
+    ```
 
-- Helps in offline development.
-- Easy integrations with source control like git.
-- The Maven build strategy is a good strategy if your current enterprise build and deploy strategies already use Maven or Maven compatible tools.
-- Configuration management across organizations/environments.
-(Realtime Enterprise Edge architecture consists of multiple organizations/environments and configurations which varies according to these. An example scenario for this use would be the Maven configuration file to replace the number of requests it takes to trip a spike arrest policy. In your non-production environment you may want this policy to take effect when 10 requests a minute is surpassed, in production you may want this policy to trip when 10000 requests a minute is surpassed.)
-
+   * If you want to use this plugin for Apigee X / Apigee hybrid -> You should be using the version 2.x
+    ```xml
+    <dependency>
+      <groupId>io.apigee.build-tools.enterprise4g</groupId>
+      <artifactId>apigee-edge-maven-plugin</artifactId>
+      <version>2.x</version>
+    </dependency>
+    ```
 
 
 ## Building API bundles
@@ -338,22 +335,10 @@ Supported from v2.5.0
 Please refer to this [doc](http://maven.apache.org/guides/mini/guide-proxies.html) that explains how to setup proxy settings in your settings.xml usually in your $HOME/.m2 directory. Only `https` protocol is supported
 
 ------------------------------------------
-Recommended Convention for Contributions
-------------------------------------------
-
-Refer [Guide for Plugin Developers](https://github.com/apigee/apigee-deploy-maven-plugin/blob/master/PluginDevelopers-Guide.md)
-
-
-People Involved
-------------------------
-
-The plugin is initially developed by [Santany Dey](sdey@apigee.com). With major contributions from [Sai Saran Vaidyanathan](https://github.com/ssvaidyanathan), [Madhan Sadasivam](https://github.com/msadasivam). The plugin is open sourced by [Priyanky Thomas](priyanky@apigee.com). 
+ 
 
 ## Support
-Issues filed on Github are not subject to service level agreements (SLAs) and responses should be assumed to be on an ad-hoc volunteer basis. The
-[Apigee community board](https://community.apigee.com/) is recommended as for community support and is regularly checked by Apigee experts.
+The [Apigee community board](https://community.apigee.com/) is recommended as for community support and is regularly checked by Apigee experts.
 
 Apigee customers should use [formal support channels](https://cloud.google.com/apigee/support) for Apigee product related concerns.
 
-## Disclaimer
-This is not an officially supported Google product.
