@@ -1,0 +1,41 @@
+[Link](https://www.youtube.com/watch?v=u7zsQR4e0mE)
+
+- Tasks required previous to ship to an environment
+  - Clean API bundle files & folders
+  - Copy artifacts
+  - Configure artifacts / environment
+  - Package artifacts
+  - Delete last deployment from the gateway
+  - Import and deploy API bundle -- to the -- gateway
+  - Execute unit tests
+  - Execute functional tests
+  - Execute performance tests
+  - Deploy and test documentation on Container Management System
+  - ...
+- Options
+  - build in house tools
+    - possible cons
+      - maintenance
+      - lack of integrations with CI/CD systems
+      - platform specific
+  - Apigee Deploy Maven Plugin
+    - pros
+      - spend my force task in other areas
+      - extensible plugin
+      - uses via
+        - CLI
+        - IDE's integration supported
+      - multilanguage support
+      - big community 
+      - integration with CI tools
+    - cons
+      - if you want to extend it
+- What to learn previously?
+  - 'pom.xml' structure
+  - how to 
+    - configure multiple environments?
+    - deploy multiple environments?
+    - run tests as part of the build?
+- Run the samples
+  - Follow '/samples/README.md'
+- TODO: Follow from 19:00

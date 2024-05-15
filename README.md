@@ -6,11 +6,6 @@ Plugin which allows
 * build Apigee ApiProxy's/Application bundles &
 * deploy Apigee ApiProxy's/Application bundles -- into --> Apigee hybrid Edge Platform
 
-------------
-Video
-------------
-
-Learn more, check out this video! [Ask the Expert](https://www.youtube.com/watch?v=u7zsQR4e0mE)
 
 -------------------------------------------
 ## Detailed documentation on the use of plugin
@@ -32,10 +27,12 @@ Learn more, check out this video! [Ask the Expert](https://www.youtube.com/watch
   - [Config.json Sample](#config-json-sample)
 - [Commands](#commands-for-deploying-the-proxy-using-maven)
 - [To configure a proxy](#to-configure-a-proxy)
+- Talks
+  - Check '/talks'
 
 # Prerequisites
-You will need the following to run the samples:
-- Apigee Edge developer account. See [docs](http://apigee.google.com) for more details on how to setup your account..
+- Apigee Edge developer account
+  - Check [docs](http://apigee.google.com) 
 - [Java SDK >= 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 - [Maven 3.x](https://maven.apache.org/)
 
