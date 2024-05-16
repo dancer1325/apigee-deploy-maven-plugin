@@ -27,11 +27,15 @@ Plugin which allows
 - Talks
   - Check '/talks'
 
+---
+
 # Prerequisites
 - Apigee Edge developer account
   - Check [docs](http://apigee.google.com) 
 - [Java SDK >= 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 - [Maven 3.x](https://maven.apache.org/)
+
+---
 
 # Getting Started
 
@@ -66,6 +70,7 @@ Plugin which allows
     </dependency>
     ```
 
+---
 
 # Building API bundles
 
@@ -91,6 +96,30 @@ Plugin which allows
 - TODO: It's API or API Proxy? 
 - Follow [Download API proxies](https://docs.apigee.com/api-platform/fundamentals/download-api-proxies)
 
+---
+
+# Building Shared Flow bundles
+
+## What is a Shared Flow bundle?
+
+- := zipped file system /
+  - == policies + steps + code
+  - structure
+
+```
+ |-sharedflowbundle/
+   |-policies
+   |-sharedflows
+```
+- API Proxy vs Shared Flows
+  - Steps and options available for building and deploying Shared Flows == Steps and options available for building and deploying API Proxy
+  - profile's property  -- `<apigee.apitype>sharedflow</apigee.apitype>` --
+- _Example:_ Check [samples](./samples/security-sharedflow/src/sharedflows) 
+  - folder structure and
+  - parent pom file
+
+
+---
 
 ## Steps to set it up
 
@@ -308,23 +337,7 @@ The following entries in some XML file elements could be changed to match the cu
 3. The value of the "apigee.org" element should match the organization provided when Customer environment was initially setup, in most cases this includes the name of the company. 
    * For private cloud installations, the org is setup when you run installation scripts. The Maven group id is malleable and is also marked in red for both pom examples, the only thing to note when changing this is that they need to be consistent between applications.
 
-## Building Shared Flow bundles
 
-### What is a Shared Flow bundle?
-
-Shared Flow bundles can be described as a zipped file system composed of policies, steps and code. The file system when extracted is composed of the following structure.
-
-```
- |-sharedflowbundle/
-   |-policies
-   |-sharedflows
-```
-The build steps and the options available for building and deploying Shared Flows are the same as API Proxy.
-The [samples](./samples/security-sharedflow/src/sharedflows) has an example of a standard sharedflow with the folder structure and the parent pom file. The only key difference between the API Proxy and the Shared Flow is a new property as part of the profiles.
-
-`<apigee.apitype>sharedflow</apigee.apitype>`
-
-This is required to differentiate the build and deployment process.
 
 ## To configure a proxy 
 Supported from v2.5.0
