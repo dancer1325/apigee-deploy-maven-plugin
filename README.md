@@ -4,7 +4,7 @@ apigee-deploy-maven-plugin (Apigee X or Apigee hybrid)
 
 Plugin which allows
 * build Apigee ApiProxy's/Application bundles &
-* deploy Apigee ApiProxy's/Application bundles -- into --> Apigee hybrid Edge Platform
+* deploy Apigee ApiProxy's/Application bundles -- into --> Apigee Platform
 
 -------------------------------------------
 
@@ -30,8 +30,8 @@ Plugin which allows
 ---
 
 # Prerequisites
-- Apigee Edge developer account
-  - Check [docs](http://apigee.google.com) 
+- Apigee IAM permissions
+  - Check [docs](https://cloud.google.com/apigee/docs/api-platform/system-administration/apigee-roles) 
 - [Java SDK >= 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 - [Maven 3.x](https://maven.apache.org/)
 
@@ -45,7 +45,7 @@ Plugin which allows
   - Easy integrations with -- source control version tools
   - if your current enterprise build and deploy strategies using Maven or Maven compatible tools 
   - Configuration management -- across -- organizations/environments
-    - Realtime Enterprise Edge architecture
+    - Realtime Enterprise Apigee architecture
       - ==multiple organizations/environments + configurations / based on previous ones
         - _Example:_ Maven configuration file to replace the number of requests it takes to trip a spike arrest policy
           - In your non-production environment -- you may want this policy to take effect when -- > 10 requests / minute
@@ -88,13 +88,11 @@ Plugin which allows
    |-targets
 ```
 
-## Create a new API Proxy
-- TODO: It's API or API Proxy? 
-- Follow [Build your first API proxy](https://docs.apigee.com/api-platform/get-started/get-started)
+## Create a new API Proxy 
+- Follow [Build your first API proxy](http://apigee.com/docs/api-platform/content/add-and-configure-your-first-api)
 
 ## Export your API Proxy
-- TODO: It's API or API Proxy? 
-- Follow [Download API proxies](https://docs.apigee.com/api-platform/fundamentals/download-api-proxies)
+- Follow [Download API proxies](https://cloud.google.com/apigee/docs/api-platform/fundamentals/download-api-proxies#download)
 
 ---
 
@@ -129,7 +127,6 @@ Follow below steps to set up your local development environment
 2. Create and configure pom files - Parent pom and the child pom for the proxy
 3. Create and configure config.json - if there are environment specific configurations (This is an optional step)
 
-And you are ready for deploy to Apigee Edge using the plugin
 
 ### Step 1 Create a Maven compatible file structure
 
